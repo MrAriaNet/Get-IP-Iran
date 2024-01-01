@@ -19,4 +19,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call a Bash Script
-        run:  bash < <(curl -s https://raw.githubusercontent.com/MrAriaNet/Get-IP-Iran/main/get.sh) >> $GITHUB_OUTPUT
+        run:  bash < <(curl -s https://raw.githubusercontent.com/MrAriaNet/Get-IP-Iran/main/get.sh)
+      - name: Commit & Push
+        uses: Andro999b/push@v1.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+          force: true
+          message: 'Overwritten by Github Actions - ${date}'
