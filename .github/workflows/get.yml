@@ -19,4 +19,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call a Bash Script
-        run:  bash get.sh
+        run:  bash ${GITHUB_WORKSPACE}/get.sh
