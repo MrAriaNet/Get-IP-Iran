@@ -19,4 +19,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call a Bash Script
-        run:  bash < <(curl -s https://raw.githubusercontent.com/MrAriaNet/Get-IP-Iran/main/get.sh)
+        run:  bash < <(curl -s https://raw.githubusercontent.com/MrAriaNet/Get-IP-Iran/main/get.sh) >> $GITHUB_OUTPUT
