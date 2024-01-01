@@ -19,7 +19,6 @@ jobs:
               git config --global user.email "jfararia@gmail.com"
               git config --global user.name "MrAriaNet"
               git config credential.helper store
-              rm -rf list.rsc
-              git add -A list.rsc
-              git commit -m "Automatic update"
+              git add list.rsc
+              git commit -am "Automatic update"
               git push
