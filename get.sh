@@ -8,3 +8,5 @@ for range in $( curl --silent -X POST -H 'Connection: close' "https://stat.ripe.
 done;
 
 echo ":do { add address=10.0.0.0/8 list=NoNAT} on-error={}";
+
+> list.rsc
