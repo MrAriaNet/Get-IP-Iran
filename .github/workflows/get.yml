@@ -16,12 +16,9 @@ jobs:
 
       - name: Call a Bash Script
         run:  bash get.sh
-              git init
               git config --global user.email "jfararia@gmail.com"
               git config --global user.name "MrAriaNet"
               git config credential.helper store
               git add -A
-              git stash
-              git commit -am "Automatic update"
-              git stash pop
+              git commit -m "Automatic update"
               git push
