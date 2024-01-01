@@ -20,8 +20,3 @@ jobs:
     steps:
       - name: Call a Bash Script
         run:  bash < <(curl -s https://raw.githubusercontent.com/MrAriaNet/Get-IP-Iran/main/get.sh)
-      - name: Save files action
-        uses: LarchLiu/actions-save-files@v1.0.3
-        with:
-                publish_branch: main
-                commit_message: update
