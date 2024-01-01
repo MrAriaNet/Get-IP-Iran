@@ -1,0 +1,22 @@
+# This is a basic workflow to help you get started with Actions
+
+name: GetIP
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  runscript:
+    name: GetIP
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call a Bash Script
+        run:  bash ${GITHUB_WORKSPACE}/get.sh
