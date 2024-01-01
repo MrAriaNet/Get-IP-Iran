@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Call a Bash Script
-        run:  bash < <(curl -s https://raw.githubusercontent.com/MrAriaNet/Get-IP-Iran/main/get.sh)
+        run:  bash get.sh
               git config --global user.email "jfararia@gmail.com"
               git config --global user.name "MrAriaNet"
               git config credential.helper store
