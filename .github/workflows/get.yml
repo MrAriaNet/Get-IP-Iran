@@ -18,5 +18,14 @@ jobs:
     name: GetIP
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
       - name: Call a Bash Script
         run:  bash < <(curl -s https://raw.githubusercontent.com/MrAriaNet/Get-IP-Iran/main/get.sh)
+              git config --global user.email "jfararia@gmail.com"
+              git config --global user.name "MrAriaNet"
+              git config credential.helper store
+              git add -A
+              git commit -m "Automatic update"
+              git push
