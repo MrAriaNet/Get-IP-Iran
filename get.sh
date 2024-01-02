@@ -1,5 +1,6 @@
 #!/bin/bash
-
+last=$(date)
+echo "#Last Update: $last";
 echo "/ip firewall address-list remove [/ip firewall address-list find list=NoNAT]";
 echo "/ip firewall address-list";
 
