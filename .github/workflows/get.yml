@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Call a Bash Script
         run: |
@@ -20,6 +20,6 @@ jobs:
           git config --global user.email "47712536+MrAriaNet@users.noreply.github.com"
           git config --global user.name "MrAriaNet"
           git config credential.helper store
-          git add list.rsc
-          git commit -am "Automatic update"
+          git add -A
+          git commit -m "Automatic update"
           git push
