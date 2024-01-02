@@ -16,7 +16,6 @@ jobs:
 
       - name: Call a Bash Script
         run: |
-          rm -rf list.rsc
           bash get.sh > list.rsc
           git config --global user.email "47712536+MrAriaNet@users.noreply.github.com"
           git config --global user.name "MrAriaNet"
