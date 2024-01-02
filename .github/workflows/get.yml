@@ -22,4 +22,4 @@ jobs:
           git config credential.helper store
           git add -A
           git diff-index --quiet HEAD || git commit -m "Automatic update"
-          git push -f origin main
+          git push -f
