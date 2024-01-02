@@ -16,7 +16,7 @@ jobs:
 
       - name: Call a Bash Script
         run: |
-          bash get.sh
+          bash get.sh > list.rsc
           git config --global user.email "47712536+MrAriaNet@users.noreply.github.com"
           git config --global user.name "MrAriaNet"
           git config credential.helper store
