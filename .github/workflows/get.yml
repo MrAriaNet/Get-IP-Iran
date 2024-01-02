@@ -15,4 +15,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Call a Bash Script
-        run:  bash get.sh >> $GITHUB_PATH
+        run:  bash get.sh
