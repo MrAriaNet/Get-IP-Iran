@@ -22,5 +22,5 @@ jobs:
           git config --global user.name "MrAriaNet"
           git config credential.helper store
           git add -A
-          git commit -m "Automatic update"
+          git diff-index --quiet HEAD || git commit -m "Automatic update"
           git push
