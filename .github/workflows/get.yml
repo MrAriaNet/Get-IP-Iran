@@ -16,10 +16,11 @@ jobs:
 
       - name: Call a Bash Script
         run: |
+          echo "" > list.rsc
           bash get.sh
           git config --global user.email "jfararia@gmail.com"
           git config --global user.name "MrAriaNet"
           git config credential.helper store
-          git add -A
-          git commit -m "Automatic update"
+          git add list.rsc
+          git commit -am "Automatic update"
           git push
