@@ -1,4 +1,4 @@
-#Last update: Wed Oct  2 17:52:34 UTC 2024
+#Last update: Wed Oct  2 18:29:29 UTC 2024
 /ip firewall address-list remove [/ip firewall address-list find list=NoNAT]
 /ip firewall address-list
 :do { add address=2.57.3.0/24 list=NoNAT} on-error={}
