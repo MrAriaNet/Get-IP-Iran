@@ -1,4 +1,4 @@
-#Last update: Tue Jun 24 07:57:30 UTC 2025
+#Last update: Tue Jun 24 08:36:41 UTC 2025
 /ip firewall address-list remove [/ip firewall address-list find list=NoNAT]
 /ip firewall address-list
 :do { add address=2.57.3.0/24 list=NoNAT} on-error={}
@@ -573,7 +573,6 @@
 :do { add address=91.184.80.0/20 list=NoNAT} on-error={}
 :do { add address=91.185.128.0/19 list=NoNAT} on-error={}
 :do { add address=91.190.88.0/21 list=NoNAT} on-error={}
-:do { add address=91.194.6.0/24 list=NoNAT} on-error={}
 :do { add address=91.195.37.0/24 list=NoNAT} on-error={}
 :do { add address=91.197.242.0/24 list=NoNAT} on-error={}
 :do { add address=91.199.9.0/24 list=NoNAT} on-error={}
