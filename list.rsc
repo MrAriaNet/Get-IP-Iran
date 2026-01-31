@@ -573,6 +573,7 @@
 :do { add address=2a14:f780::/29 list=IRv6} on-error={}
 :do { add address=2a14:f880::/29 list=IRv6} on-error={}
 #Last update: Sat Jan 31 17:18:40 +0330 2026
+#Last update: Sat Jan 31 15:33:25 UTC 2026
 /ip firewall address-list remove [/ip firewall address-list find list=NoNAT]
 /ip firewall address-list
 :do { add address=10.0.0.0/8 list=NoNAT} on-error={}
