@@ -20,6 +20,13 @@ rsc_fwv6()
 	echo "/ipv6 firewall address-list";
 }
 
+rsc_respinav4()
+{
+	echo ":do { add address=5.160.0.0/16 list=NoNAT} on-error={}";
+	echo ":do { add address=46.209.0.0/16 list=NoNAT} on-error={}";
+	echo ":do { add address=77.104.64.0/18 list=NoNAT} on-error={}";
+}
+
 rsc_intranetv4()
 {
 	echo ":do { add address=10.0.0.0/8 list=NoNAT} on-error={}";
@@ -36,6 +43,7 @@ rsc_address_add()
 	if [ $3 = "v4" ]
 	then
 		rsc_fwv4
+		rsc_respinav4
 		rsc_intranetv4
 	elif [ $3 = "v6" ]
 	then
