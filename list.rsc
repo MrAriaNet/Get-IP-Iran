@@ -1,4 +1,4 @@
-#Last update: Fri May  8 08:09:37 UTC 2026
+#Last update: Fri May  8 09:55:04 UTC 2026
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list=IRv6]
 /ipv6 firewall address-list
 :do { add address=2001:678:b0::/46 list=IRv6} on-error={}
@@ -572,7 +572,7 @@
 :do { add address=2a14:f680::/29 list=IRv6} on-error={}
 :do { add address=2a14:f780::/29 list=IRv6} on-error={}
 :do { add address=2a14:f880::/29 list=IRv6} on-error={}
-#Last update: Fri May  8 08:09:37 UTC 2026
+#Last update: Fri May  8 09:55:04 UTC 2026
 /ip firewall address-list remove [/ip firewall address-list find list=NoNAT]
 /ip firewall address-list
 :do { add address=5.160.0.0/16 list=NoNAT} on-error={}
@@ -1448,6 +1448,7 @@
 :do { add address=158.255.74.0/24 list=NoNAT} on-error={}
 :do { add address=158.255.78.0/24 list=NoNAT} on-error={}
 :do { add address=159.20.96.0/20 list=NoNAT} on-error={}
+:do { add address=164.40.233.0/24 list=NoNAT} on-error={}
 :do { add address=164.138.16.0/21 list=NoNAT} on-error={}
 :do { add address=164.138.128.0/18 list=NoNAT} on-error={}
 :do { add address=164.138.202.0/24 list=NoNAT} on-error={}
