@@ -1,7 +1,7 @@
-#Last update: Thu Jun  4 22:45:55 UTC 2026
+#Last update: Fri Jun  5 00:14:23 UTC 2026
 /ipv6 firewall address-list remove [/ipv6 firewall address-list find list=IRv6]
 /ipv6 firewall address-list
-#Last update: Thu Jun  4 22:45:55 UTC 2026
+#Last update: Fri Jun  5 00:14:23 UTC 2026
 /ip firewall address-list remove [/ip firewall address-list find list=NoNAT]
 /ip firewall address-list
 :do { add address=5.160.0.0/16 list=NoNAT} on-error={}
