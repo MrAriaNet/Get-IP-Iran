@@ -4,6 +4,24 @@ This repository creates MikroTik address-list files for Iran IP ranges and provi
 
 The project now separates IPv4 and IPv6, and also separates the update method for small routers and medium/large routers.
 
+## IP Data Source
+
+The IP ranges are generated from RIPEstat country resource data for Iran:
+
+```text
+https://stat.ripe.net/data/country-resource-list/data.json?resource=IR&v4_format=prefix
+```
+
+The repository may still appear on GitHub as a fork of `MrAriaNet/Get-IP-Iran`, but the automatic update workflow does not fetch data or code from that repository.
+
+Current update path:
+
+```text
+RIPEstat -> get.sh -> list-ipv4.rsc / list-ipv6.rsc
+```
+
+The old upstream sync workflow was removed on purpose, so the generated IP lists are updated only from the source API used by `get.sh`.
+
 ## Address Lists
 
 | File | RouterOS address list | Purpose |
