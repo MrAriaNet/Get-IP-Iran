@@ -1,0 +1,2 @@
+/ip dns adlist
+add ssl-verify=no url=https://raw.githubusercontent.com/IgorKha/mikrotik-adlist/refs/heads/main/hosts/1hosts_lite.txt
