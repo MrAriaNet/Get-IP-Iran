@@ -4,7 +4,7 @@ add dont-require-permissions=no \
     owner=admin \
     policy=read,write,policy,test \
     source=":local fileName \"iran-ip.rsc\"
-:local url \"https://raw.githubusercontent.com/mohavise/Get-IP-Iran-evo/main/list.rsc\"
+:local url \"https://raw.githubusercontent.com/mohavise/Get-IP-Iran-evo/main/list-ipv4.rsc\"
 :local ipv4List \"NoNAT\"
 :local ipv6List \"IRv6\"
 :local backupList \"NoNAT-backup-before-update\"
