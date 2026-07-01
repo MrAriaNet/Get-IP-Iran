@@ -17,10 +17,10 @@ The repository may still appear on GitHub as a fork of `MrAriaNet/Get-IP-Iran`, 
 Current update path:
 
 ```text
-RIPEstat -> get.sh -> list-ipv4.rsc / list-ipv6.rsc
+RIPEstat -> scripts/get.sh -> list-ipv4.rsc / list-ipv6.rsc
 ```
 
-The old upstream sync workflow was removed on purpose, so the generated IP lists are updated only from the source API used by `get.sh`.
+The old upstream sync workflow was removed on purpose, so the generated IP lists are updated only from the source API used by `scripts/get.sh`.
 
 ## Address Lists
 
@@ -176,19 +176,19 @@ You can also run it manually from the GitHub Actions tab.
 
 ## Generate Lists Manually
 
-The `get.sh` script can generate the lists from source data.
+The `scripts/get.sh` script can generate the lists from source data.
 
 ```bash
-./get.sh v4
-./get.sh v6
-./get.sh split
+./scripts/get.sh v4
+./scripts/get.sh v6
+./scripts/get.sh split
 ```
 
 | Command | Output |
 | --- | --- |
-| `./get.sh v4` | Prints IPv4 MikroTik entries |
-| `./get.sh v6` | Prints IPv6 MikroTik entries |
-| `./get.sh split` | Writes `list-ipv4.rsc` and `list-ipv6.rsc` |
+| `./scripts/get.sh v4` | Prints IPv4 MikroTik entries |
+| `./scripts/get.sh v6` | Prints IPv6 MikroTik entries |
+| `./scripts/get.sh split` | Writes `list-ipv4.rsc` and `list-ipv6.rsc` |
 
 ## Notes
 

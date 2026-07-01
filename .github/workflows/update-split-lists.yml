@@ -21,8 +21,8 @@ jobs:
 
       - name: Generate split lists
         run: |
-          chmod +x get.sh
-          ./get.sh split
+          chmod +x scripts/get.sh
+          ./scripts/get.sh split
 
       - name: Commit changes
         run: |
