@@ -33,6 +33,43 @@ The old upstream sync workflow was removed on purpose, so the generated IP lists
 
 Use only the scripts you need.
 
+### Recommended Safe Install
+
+The safe install scripts fetch the updater and scheduler, import them, remove the temporary files from MikroTik disk, and run the updater once.
+
+IPv4 small router:
+
+```routeros
+/tool fetch url="https://raw.githubusercontent.com/mohavise/Get-IP-Iran-evo/main/safe-install-iran-ipv4-small-router.rsc" dst-path=safe-install-iran-ipv4-small-router.rsc mode=https
+/import file-name=safe-install-iran-ipv4-small-router.rsc
+/file remove [find name=safe-install-iran-ipv4-small-router.rsc]
+```
+
+IPv4 medium/large router:
+
+```routeros
+/tool fetch url="https://raw.githubusercontent.com/mohavise/Get-IP-Iran-evo/main/safe-install-iran-ipv4-medium-large-router.rsc" dst-path=safe-install-iran-ipv4-medium-large-router.rsc mode=https
+/import file-name=safe-install-iran-ipv4-medium-large-router.rsc
+/file remove [find name=safe-install-iran-ipv4-medium-large-router.rsc]
+```
+
+IPv6 small router:
+
+```routeros
+/tool fetch url="https://raw.githubusercontent.com/mohavise/Get-IP-Iran-evo/main/safe-install-iran-ipv6-small-router.rsc" dst-path=safe-install-iran-ipv6-small-router.rsc mode=https
+/import file-name=safe-install-iran-ipv6-small-router.rsc
+/file remove [find name=safe-install-iran-ipv6-small-router.rsc]
+```
+
+IPv6 medium/large router:
+
+```routeros
+/tool fetch url="https://raw.githubusercontent.com/mohavise/Get-IP-Iran-evo/main/safe-install-iran-ipv6-medium-large-router.rsc" dst-path=safe-install-iran-ipv6-medium-large-router.rsc mode=https
+/import file-name=safe-install-iran-ipv6-medium-large-router.rsc
+/file remove [find name=safe-install-iran-ipv6-medium-large-router.rsc]
+```
+
+### Manual Install
 ### IPv4 Only
 
 Small router:

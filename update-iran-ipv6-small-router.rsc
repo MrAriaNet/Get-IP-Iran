@@ -1,9 +1,10 @@
-/system script
-add dont-require-permissions=no \
-    name=update-iran-ipv6-small-router \
-    owner=admin \
-    policy=read,write,policy,test \
-    source=":local fileName \"iran-ipv6.rsc\"
+# managed-by=mohavise-mikrotik-iran-ip
+# project=get-ip-iran-evo
+# do-not-edit-manually
+
+:do {
+    :local scriptName "update-iran-ipv6-small-router"
+    :local scriptSource ":local fileName \"iran-ipv6.rsc\"
 :local url \"https://raw.githubusercontent.com/mohavise/Get-IP-Iran-evo/main/list-ipv6.rsc\"
 :local ipv6List \"IRv6\"
 :local backupList \"IRv6-backup-before-update\"
@@ -73,3 +74,10 @@ add dont-require-permissions=no \
 /ipv6 firewall address-list remove [find list=\$backupList]
 /file remove \$fileName
 :log info \"Iran IPv6 update: IRv6 address list updated successfully\""
+
+    :if ([:len [/system script find name=$scriptName]] = 0) do={
+        /system script add name=$scriptName dont-require-permissions=no policy=read,write,policy,test source=$scriptSource comment="managed-by=mohavise-mikrotik-iran-ip project=get-ip-iran-evo"
+    } else={
+        /system script set [/system script find name=$scriptName] dont-require-permissions=no policy=read,write,policy,test source=$scriptSource comment="managed-by=mohavise-mikrotik-iran-ip project=get-ip-iran-evo"
+    }
+}

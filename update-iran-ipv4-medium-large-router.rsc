@@ -1,9 +1,10 @@
-/system script
-add dont-require-permissions=no \
-    name=update-iran-ipv4-medium-large-router \
-    owner=admin \
-    policy=read,write,policy,test \
-    source=":local fileName \"iran-ipv4.rsc\"
+# managed-by=mohavise-mikrotik-iran-ip
+# project=get-ip-iran-evo
+# do-not-edit-manually
+
+:do {
+    :local scriptName "update-iran-ipv4-medium-large-router"
+    :local scriptSource ":local fileName \"iran-ipv4.rsc\"
 :local backupFile \"nonat-ipv4-backup-before-update.rsc\"
 :local url \"https://raw.githubusercontent.com/mohavise/Get-IP-Iran-evo/main/list-ipv4.rsc\"
 :local ipv4List \"NoNAT\"
@@ -69,3 +70,10 @@ add dont-require-permissions=no \
 /file remove \$fileName
 /file remove \$backupFile
 :log info \"Iran IPv4 update: NoNAT address list updated successfully\""
+
+    :if ([:len [/system script find name=$scriptName]] = 0) do={
+        /system script add name=$scriptName dont-require-permissions=no policy=read,write,policy,test source=$scriptSource comment="managed-by=mohavise-mikrotik-iran-ip project=get-ip-iran-evo"
+    } else={
+        /system script set [/system script find name=$scriptName] dont-require-permissions=no policy=read,write,policy,test source=$scriptSource comment="managed-by=mohavise-mikrotik-iran-ip project=get-ip-iran-evo"
+    }
+}

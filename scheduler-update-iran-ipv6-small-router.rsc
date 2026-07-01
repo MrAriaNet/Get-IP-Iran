@@ -1,6 +1,14 @@
-/system scheduler
-add name=run-update-iran-ipv6-small-router \
-    start-time=04:10:00 \
-    interval=1d \
-    on-event="/system script run update-iran-ipv6-small-router" \
-    policy=read,write,policy,test
+# managed-by=mohavise-mikrotik-iran-ip
+# project=get-ip-iran-evo
+# do-not-edit-manually
+
+:do {
+    :local scheduleName "run-update-iran-ipv6-small-router"
+    :local scheduleEvent "/system script run update-iran-ipv6-small-router"
+
+    :if ([:len [/system scheduler find name=$scheduleName]] = 0) do={
+        /system scheduler add name=$scheduleName start-time=04:10:00 interval=1d on-event=$scheduleEvent policy=read,write,policy,test comment="managed-by=mohavise-mikrotik-iran-ip project=get-ip-iran-evo"
+    } else={
+        /system scheduler set [/system scheduler find name=$scheduleName] start-time=04:10:00 interval=1d on-event=$scheduleEvent policy=read,write,policy,test comment="managed-by=mohavise-mikrotik-iran-ip project=get-ip-iran-evo"
+    }
+}
